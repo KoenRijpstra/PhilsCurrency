@@ -12,10 +12,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center text-white">
-                <h1 class="text-white">About Us</h1>
+                <h1 class="text-white">{{ .Title }}</h1>
                 <div class="u-h-4 u-w-50 bg-white rounded mx-auto my-4"></div>
                 <p class="lead">
-                    Meet the amazing team behind this project and find out more <br> about how we work.
+                    {{ .Params.Intro | markdownify }}
                 </p>
             </div>
         </div> <!-- END row-->
