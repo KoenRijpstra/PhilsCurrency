@@ -23,16 +23,8 @@ gulp.task('hugo', (cb) => buildSite(cb))
 gulp.task('hugo-preview', (cb) => buildSite(cb, hugoArgsPreview))
 
 // Build/production tasks
-gulp.task('build', ['css', 'js'], (cb) => buildSite(cb, [], 'production'))
-gulp.task('build-preview', ['css', 'js'], (cb) => buildSite(cb, hugoArgsPreview, 'production'))
-
-// Compile CSS with PostCSS
-gulp.task('css', () => (
-  gulp.src('./src/css/*.css')
-    .pipe(postcss([cssImport({from: './src/css/main.css'}), cssnext()]))
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(browserSync.stream())
-))
+gulp.task('build', ['scss', 'js'], (cb) => buildSite(cb, [], 'production'))
+gulp.task('build-preview', ['scss', 'js'], (cb) => buildSite(cb, hugoArgsPreview, 'production'))
 
 // Compile SCSS files to CSS
 gulp.task('scss', function () {
@@ -71,9 +63,6 @@ gulp.task('server', ['hugo', 'scss', 'js'], () => {
   })
   watch('./src/js/**/*.js', () => {
     gulp.start(['js'])
-  })
-  watch('./src/css/**/*.css', () => {
-    gulp.start(['css'])
   })
   watch('./src/scss/**/*.scss', () => {
     gulp.start(['scss'])
