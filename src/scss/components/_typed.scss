@@ -1,0 +1,7 @@
+.typed {
+  height: px-to-rem(150);
+  // Example usage:
+  @include breakpoint(sm) {
+    height: auto;
+  }
+}
