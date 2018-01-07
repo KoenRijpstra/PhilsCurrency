@@ -1,13 +1,15 @@
 // Variable and settings 
 @import "variables";
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "./node_modules/animate.css/animate";
 
 // Mixins
 @import "mixins"; 
 
 // Component 
-@import "components/base";
 @import "components/global";
-@import "components/header"; 
+@import "components/resposive-type-scale";
+@import "components/header";
 @import "components/intro";  
 @import "components/footer";
 @import "components/button"; 

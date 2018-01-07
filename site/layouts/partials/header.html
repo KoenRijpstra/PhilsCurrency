@@ -22,13 +22,12 @@
     <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
 
     <!--Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700%7COpen+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700%7COpen+Sans:300,400,600,700"
+          rel="stylesheet">
 
     <!--Icon fonts-->
     <link rel="stylesheet" href="/vendor/fontawesome-pro/css/fa-svg-with-js.css">
-    <link rel="stylesheet" href="/css/bundle.css">
     <link rel="stylesheet" href="/css/style.css">
-
 </head>
 
 <body id="top">
@@ -38,68 +37,63 @@
     to improve your experience.</p>
 <![endif]-->
 
-<header class="header header-shrink header-inverse fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <nav class="navbar navbar-expand-lg px-md-0">
-            <a class="navbar-brand" href="/">
-				<span class="logo-default">
-					<img src="/img/logo-default.png" alt="">
-				</span>
-                <span class="logo-inverse">
-					<img src="/img/logo-inverse.png" alt="">
-				</span>
-            </a>
 
-            <div class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
-                <span class="fal fa-bars nav-hamburger"></span>
-                <span class="fal fa-times nav-close"></span>
-            </div>
+        <a class="navbar-brand mr-0 mr-md-2" href="/">
+            <img class="logo logo-default img-fluid" src="/img/logo-default.png" alt="">
+            <img class="logo logo-inverse img-fluid" src="/img/logo-inverse.png" alt="">
+        </a>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">HOME</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/about/">ABOUT</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                            Community<i class="fal fa-chevron-down u-fs-12 ml-1"></i>
-                        </a>
-                        <div class="dropdown-menu box-shadow-v2" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://discord.gg/822ezXx" target="_blank"><i
-                                    class="fab fa-discord text-discord"
-                                    aria-hidden="true"></i>&nbsp;&nbsp;Discord</a>
-                            <a class="dropdown-item" href="https://t.me/joinchat/FVQq4xE67-6qCduxbfoxEA"
-                               target="_blank"><i class="fab fa-telegram text-telegram" aria-hidden="true"></i>&nbsp;&nbsp;Telegram</a>
-                            <a class="dropdown-item"
-                               href="https://join.slack.com/t/philscurrency/shared_invite/enQtMjgzMjk4NTA3OTQyLWJiYjA1NzBiNjEyNTA5NjkyMjFhYmQzMTA2ZjQyNzY5NmYyMmE3Y2E5MDA1ODEwYTY5ZWQ4MWU2NzJkYzJlNGE"
-                               target="_blank"><img src="img/svg/slack.svg" class="u-h-16" alt="">&nbsp;&nbsp;<span
-                                    class="u-va-m">Slack</span></a>
-                            <a class="dropdown-item"
-                               href="https://bitcointalk.org/index.php?topic=2534213.msg25838315#msg25838315"
-                               target="_blank"><img src="img/png/bitcointalk.png" class="u-h-16"
-                                                    alt="">&nbsp;&nbsp;<span class="u-va-m">BitcoinTalk</span></a>
-                            <a class="dropdown-item"
-                               href="https://twitter.com/PhilsCurrency/"
-                               target="_blank"><i class="fab fa-twitter text-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a>
-                            <a class="dropdown-item"
-                               href="https://www.facebook.com/PhilsCurrency/"
-                               target="_blank"><i class="fab fa-facebook text-facebook" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a>
-                        </div>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="http://explorer.philscurrency.com:3001/" target="_blank">BLOCK
-                            EXPLORER</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/help/">HELP</a>
-                    </li>
-                </ul>
-            </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1"
+                aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fal fa-bars"></span>
+        </button>
 
-        </nav>
-    </div> <!-- END container-->
-</header> <!-- END header -->
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        COMMUNITY
+                        <i class="fal fa-angle-down"></i>
+                    </a>
+                    <div class="dropdown-menu box-shadow-v2" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://discord.gg/822ezXx" target="_blank"><i
+                                class="fab fa-discord text-discord"
+                                aria-hidden="true"></i>&nbsp;&nbsp;Discord</a>
+                        <a class="dropdown-item" href="https://t.me/joinchat/FVQq4xE67-6qCduxbfoxEA"
+                           target="_blank"><i class="fab fa-telegram text-telegram" aria-hidden="true"></i>&nbsp;&nbsp;Telegram</a>
+                        <a class="dropdown-item"
+                           href="https://join.slack.com/t/philscurrency/shared_invite/enQtMjgzMjk4NTA3OTQyLWJiYjA1NzBiNjEyNTA5NjkyMjFhYmQzMTA2ZjQyNzY5NmYyMmE3Y2E5MDA1ODEwYTY5ZWQ4MWU2NzJkYzJlNGE"
+                           target="_blank"><img src="img/svg/slack.svg" class="u-h-16" alt="">&nbsp;&nbsp;<span
+                                class="u-va-m">Slack</span></a>
+                        <a class="dropdown-item"
+                           href="https://bitcointalk.org/index.php?topic=2534213.msg25838315#msg25838315"
+                           target="_blank"><img src="img/png/bitcointalk.png" class="u-h-16"
+                                                alt="">&nbsp;&nbsp;<span class="u-va-m">BitcoinTalk</span></a>
+                        <a class="dropdown-item"
+                           href="https://twitter.com/PhilsCurrency/"
+                           target="_blank"><i class="fab fa-twitter text-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a>
+                        <a class="dropdown-item"
+                           href="https://www.facebook.com/PhilsCurrency/"
+                           target="_blank"><i class="fab fa-facebook text-facebook" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://explorer.philscurrency.com:3001/" target="_blank">BLOCK
+                        EXPLORER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/help/">HELP</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

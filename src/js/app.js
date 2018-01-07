@@ -1,18 +1,22 @@
 import 'jquery'
 import 'bootstrap'
-import Typed from 'typed.js';
-import {WOW} from 'wowjs';
+import Typed from 'typed.js'
+import { WOW } from 'wowjs'
 
 (function ($) {
   'use strict'
   var app = {
     // Inverse header background when scroll
-    hederInverse: function () {
+    headerInverse: function () {
       $(window).on('scroll', function () {
         if ($(this).scrollTop() > 5) {
-          $('body').addClass('is-scrolling')
+          $('.navbar').removeClass('navbar-dark')
+          $('.navbar').addClass('bg-light')
+          $('.navbar').addClass('navbar-light')
         } else {
-          $('body').removeClass('is-scrolling')
+          $('.navbar').removeClass('bg-light')
+          $('.navbar').removeClass('navbar-light')
+          $('.navbar').addClass('navbar-dark')
         }
       })
     },
@@ -25,16 +29,16 @@ import {WOW} from 'wowjs';
     },
 
     // Smooth scroll to target element
-
     scrollTo: function () {
       $('[data-scrollto]').on('click', function () {
-        var id = '#' + $(this).data('scrollto')
-        if ($(id).length > 0) {
+        var scrollToId = '#' + $(this).data('scrollto')
+        if ($(scrollToId).length > 0) {
           var offset = 0
           if ($('.header').length) {
             offset = $('.header').height()
           }
-          $('html').animate({scrollTop: $(id).offset().top - offset}, 700)
+          console.log($(scrollToId).offset().top - offset)
+          $('html, body').animate({scrollTop: $(scrollToId).offset().top - offset}, 700)
         }
         return false
       })
@@ -42,7 +46,6 @@ import {WOW} from 'wowjs';
 
     /// Scroll to top
     scrollTop: function () {
-      var documentOffsetHeight = document.body.offsetHeight
       var windowHeight = $(window).height()
       $(window).on('scroll', function () {
         if ($(this).scrollTop() > (windowHeight + 500)) {
@@ -90,7 +93,7 @@ import {WOW} from 'wowjs';
 
     // Init the main function
     init: function () {
-      app.hederInverse()
+      app.headerInverse()
       app.accordianToggleIcon()
       app.scrollTo()
       app.scrollTop()

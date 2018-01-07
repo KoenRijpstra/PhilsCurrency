@@ -7,7 +7,7 @@
 		.show-onHover {
 			opacity: 1;
 		}
-	} 	
+	}
 }
 
 [data-dark-overlay] {
@@ -57,6 +57,6 @@
   animation-timing-function: cubic-bezier(1,0,0,1);
   animation-duration: 1s;
 }
-@keyframes blinker { 
+@keyframes blinker {
   from { opacity: 1.0; } to { opacity: 0.0; }
 }

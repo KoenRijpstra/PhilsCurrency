@@ -80,6 +80,7 @@
 	color: #20344a;
 }
 .bg-two-step{
+	position: relative;
 	@media(min-width:767px){
 		&:before {
 			content: '';

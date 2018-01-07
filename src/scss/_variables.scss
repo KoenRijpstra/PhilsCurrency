@@ -15,9 +15,7 @@ $xl:1200px;
 
 $path:"img/";
 
-
 //Colors
-
 $color-primary:#0081FF;
 $color-seondary: #4fc9ed;
 $white:#fff;
@@ -81,8 +79,8 @@ $secondary-font:'Montserrat', sans-serif;
 $heading-fonts:'Montserrat', sans-serif;
 $button-font:'Montserrat', sans-serif;
 $link-color: $color-primary !default;
-$link-decoration: underline !default;
-$link-hover-color: darken($link-color, 15%) !default;
+$link-decoration: none !default;
+$link-hover-color: lighten($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
 $h1-font-size:2.5rem;
@@ -130,3 +128,29 @@ $btn-border-radius:100em;
 $btn-padding:0.8125rem 2rem;
 $btn-disabled-opacity:.6;
 
+// Bootstrap
+$body-bg: #fff;
+$body-color: $base-font-color;
+$font-family-sans-serif: $primary-font;
+$headings-font-family: $secondary-font;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+
+$navbar-padding-y:                  1rem !default;
+$navbar-padding-x:                  1rem !default;
+
+$navbar-dark-color:                 rgba($white, .9) !default;
+$navbar-dark-hover-color:           rgba($white, .75) !default;
+$navbar-dark-active-color:          $white !default;
+$navbar-dark-disabled-color:        rgba($white, .25) !default;
+$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
+
+$navbar-light-color:                rgba($color-primary, .9) !default;
+$navbar-light-hover-color:          rgba($color-primary, .7) !default;
+$navbar-light-active-color:         rgba($color-primary, .9) !default;
+$navbar-light-disabled-color:       rgba($color-primary, .3) !default;
+$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-light-toggler-border-color: rgba($color-primary, .1) !default;

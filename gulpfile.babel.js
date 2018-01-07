@@ -64,6 +64,7 @@ gulp.task('server', ['hugo', 'scss', 'js'], () => {
   watch('./src/js/**/*.js', () => {
     gulp.start(['js'])
   })
+
   watch('./src/scss/**/*.scss', () => {
     gulp.start(['scss'])
   })
