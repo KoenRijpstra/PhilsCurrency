@@ -19,6 +19,18 @@ import { WOW } from 'wowjs'
           $('.navbar').addClass('navbar-dark')
         }
       })
+      $('#navbar1').on('show.bs.collapse', function () {
+        $('.navbar-toggler svg.svg-inline--fa').replaceWith('<i class="fal fa-times"></i>');
+        $('.navbar').removeClass('navbar-dark')
+        $('.navbar').addClass('bg-light')
+        $('.navbar').addClass('navbar-light')
+      })
+      $('#navbar1').on('hide.bs.collapse', function () {
+        $('.navbar-toggler svg.svg-inline--fa').replaceWith('<i class="fal fa-bars"></i>');
+        $('.navbar').removeClass('bg-light')
+        $('.navbar').removeClass('navbar-light')
+        $('.navbar').addClass('navbar-dark')
+      })
     },
 
     accordianToggleIcon: function () {
